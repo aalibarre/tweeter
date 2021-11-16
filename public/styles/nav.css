@@ -1,7 +1,31 @@
 
 
 nav {
-    display: grid;
-    
+    display: flex; 
+    height: 120px;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #4056A1;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    z-index: 2;
+}
 
+
+
+.titleFont {
+    font-family: 'Bungee', sans-serif; 
+    
+}
+
+.anglesDown {
+    display: flex; 
+    flex-direction: column;
+}
+
+.arrows-down {
+   align-self: center;
+   color: crimson;
 }
