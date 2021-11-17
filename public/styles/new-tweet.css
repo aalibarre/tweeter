@@ -23,6 +23,11 @@
 .text-box {
     display: flex;
     flex-direction: column;
+}
 
-    
+#tweet-text {
+    background-color:  #f4f1ec;
+    border: none;
+    border-bottom: solid;
+    font-weight: bold;
 }
