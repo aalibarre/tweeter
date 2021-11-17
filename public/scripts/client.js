@@ -62,7 +62,7 @@ const data = [
         ${tweet.content.text}
         </section>
         <footer class="bottom-of-border">
-        <section>${tweet.created_at}</section>
+        <section>${timeago.format(tweet.created_at)}</section>
         <section>
         <i class="hoverIcon fa-solid fa-flag"></i>
         <i class="hoverIcon fa-solid fa-retweet"></i>
