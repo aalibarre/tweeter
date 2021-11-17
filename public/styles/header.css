@@ -1,13 +1,13 @@
 
 
-header {
+.main-display-avatar-header {
     display: flex;
     height: 400px;
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #652d6e;
+    background-color:#652d6e;
     background-image: url("../images/45-degree-fabric-light\ \(1\).png");
 }
 

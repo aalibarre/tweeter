@@ -1,0 +1,39 @@
+.borderTweets {
+  background-color: #f4f1ec;
+  border: solid;
+  border-color: black;
+  height: 200px;
+  padding: 1em;
+}
+
+.avatar-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tiny-avatar {
+  height: 60px;
+  width: 75px;
+}
+.at-of-avatar {
+  font-size: 20px;
+}
+.head-of-tweet {
+  display: flex;
+  justify-content: space-between;
+}
+.actual-tweet {
+  border-bottom: solid;
+  padding-bottom: 15px;
+}
+
+.bottom-of-border {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.hoverIcon:hover {
+  color: #652d6e;
+}
