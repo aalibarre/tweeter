@@ -1,9 +1,18 @@
-.borderTweets {
+/* .borderTweets {
   background-color: #f4f1ec;
   border: solid;
   border-color: black;
   height: 200px;
   padding: 1em;
+} */
+
+.tweet-container {
+  background-color: #f4f1ec;
+  border: solid;
+  border-color: black;
+  height: 200px;
+  padding: 1em;
+  margin-bottom: 5px;
 }
 
 .avatar-box {
