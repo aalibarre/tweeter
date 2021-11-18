@@ -74,7 +74,20 @@ const data = [
        
         return $tweet;
       }
-      
+  
       renderTweets(data);
+
+      $("form").on("submit", function (evt) { 
+        evt.preventDefault();
+        const val = $(this).serialize();
+        $.post('/tweets', val).then((result) => {
+           console.log("result", result);
+         })
+         .catch(err => {
+            console.log('ajax error caught');
+            console.log(err); // related error
+          });
+      })
+
     })
       
