@@ -5,7 +5,7 @@ $(document).ready(function() {
      let counting = $(this).val().length 
      let stopCount = 140
      let remainingChar = stopCount - counting
-     console.log(remainingChar);
+    //  console.log(remainingChar);
       $(".counter").text(remainingChar);
       if(remainingChar < 0) {
         $(".counter").css("color", "red")
