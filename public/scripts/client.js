@@ -81,13 +81,21 @@ $(document).ready(function() {
       $("form").on("submit", function (evt) { 
         evt.preventDefault();
         const val = $(this).serialize();
-        $.post('/tweets', val).then((result) => {
-        console.log("result", result);
-         })
-         .catch(err => {
-            console.log('ajax error caught');
-            console.log(err); // related error
-          });
+        console.log(val);
+        if (val === "text=") {
+            alert("Empty text area");
+        } else if (val.length > 140) {
+            alert("To many charachters");
+        } else {
+            $.post('/tweets', val).then((result) => {
+                console.log("result", result);
+                 })
+                 .catch(err => {
+                    console.log('ajax error caught');
+                    console.log(err); // related error
+                  });
+        }
+      
       })
 
       const loadTweets = function () {
