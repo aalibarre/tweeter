@@ -28,6 +28,7 @@ $(document).ready(function () {
   };
 
   const createTweetElement = function (tweet) {
+    const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
     let $tweet = $(`
         <div class="tweet-container">
             <header class="avatar-box">
@@ -38,7 +39,7 @@ $(document).ready(function () {
                 <section class="at-of-avatar">${tweet.user.handle}</section>
             </header>
         <section class="actual-tweet">
-        ${tweet.content.text}
+        ${safeHTML}
         </section>
         <footer class="bottom-of-border">
         <section>${timeago.format(tweet.created_at)}</section>
@@ -50,7 +51,6 @@ $(document).ready(function () {
         </footer>
         </div>
         `);
-
     return $tweet;
   };
 
