@@ -46,3 +46,18 @@
 .hoverIcon:hover {
   color: #652d6e;
 }
+
+.tri{
+  color: crimson;
+}
+
+.too-short {
+  border: solid;
+  border-color: crimson;
+}
+
+.too-long {
+  border: solid;
+  border-color: crimson;
+}
+

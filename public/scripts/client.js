@@ -28,7 +28,7 @@ $(document).ready(function () {
   };
 
   const createTweetElement = function (tweet) {
-    const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
+    const safeHTML = `${escape(tweet.content.text)}`;
     let $tweet = $(`
         <div class="tweet-container">
             <header class="avatar-box">
@@ -51,20 +51,24 @@ $(document).ready(function () {
         </footer>
         </div>
         `);
-    return $tweet;
+    return $tweet; 
   };
+  $('.too-long').hide();
+  $('.too-short').hide();
 
   $("form").on("submit", function (evt) {
     evt.preventDefault();
     const val = $(this).serialize();
     console.log(val);
     if (val === "text=") {
-      alert("Empty text area");
+      $('.too-short').slideDown();
     } else if (val.length > 140) {
-      alert("To many charachters");
+        $('.too-long').slideDown();
     } else {
       $.post("/tweets", val)
         .then((result) => {
+            $('.too-long').hide();
+            $('.too-short').hide();
           console.log("result", result);
           $("#tweet-text").val("")
           loadTweets()
