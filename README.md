@@ -12,7 +12,8 @@ Tweeter is a simple, single-page Twitter clone. It features retweet, like and he
   - Express 
 
 # Final Project 
-
+!["Screenshot of the homepage in larger screen"](https://github.com/aalibarre/tweeter/blob/master/docs%20/big-screen.png?raw=true)
+!["Screenshot of the homepage screen on a mobile device"](https://github.com/aalibarre/tweeter/blob/master/docs%20/little-screen.png?raw=true)
 
 
 
