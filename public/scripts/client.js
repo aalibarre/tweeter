@@ -1,20 +1,16 @@
-
-
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
-
-
   const renderTweets = function (tweets) {
     let $borderTweets = $(".borderTweets");
     // loops through tweets
     $borderTweets.empty();
     const newTweet = tweets.sort((a, b) => {
-        return b.created_at - a.created_at;
-    }) 
+      return b.created_at - a.created_at;
+    });
     $.each(newTweet, (x) => {
       const $tweetsX = createTweetElement(tweets[x]);
 
@@ -32,7 +28,7 @@ $(document).ready(function () {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
+
   const createTweetElement = function (tweet) {
     const safeHTML = `${escape(tweet.content.text)}`;
     let $tweet = $(`
@@ -57,27 +53,27 @@ $(document).ready(function () {
         </footer>
         </div>
         `);
-    return $tweet; 
+    return $tweet;
   };
-  $('.too-long').hide();
-  $('.too-short').hide();
+  $(".too-long").hide();
+  $(".too-short").hide();
 
   $("form").on("submit", function (evt) {
     evt.preventDefault();
     const val = $(this).serialize();
     console.log(val);
     if (val === "text=") {
-      $('.too-short').slideDown();
+      $(".too-short").slideDown();
     } else if (val.length > 140) {
-        $('.too-long').slideDown();
+      $(".too-long").slideDown();
     } else {
       $.post("/tweets", val)
         .then((result) => {
-            $('.too-long').hide();
-            $('.too-short').hide();
+          $(".too-long").hide();
+          $(".too-short").hide();
           console.log("result", result);
-          $("#tweet-text").val("")
-          loadTweets()
+          $("#tweet-text").val("");
+          loadTweets();
         })
         .catch((err) => {
           console.log("ajax error caught");
