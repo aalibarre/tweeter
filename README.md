@@ -11,8 +11,18 @@ Tweeter is a simple, single-page Twitter clone. It features retweet, like and he
   - Node
   - Express 
 
+# Final Project 
+
+
+
+
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+
+## Getting Started 
+
+- Install all dependencies (using the `npm install` command).
+- Run the developement web server using the `npm run local` command.
