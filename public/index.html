@@ -4,6 +4,9 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!--Meta tag for viewport-->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -32,6 +35,8 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets-by-users.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsiveDesign.css" type="text/css" />
+  
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -57,45 +62,47 @@
         <i class="fa-solid fa-angles-down arrows-down"></i>
       </div>
     </nav>
-
-    <header class="main-display-avatar-header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2><strong>Asha</strong> Alibarre</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <div class="too-long">
-        <i class="tri fa-solid fa-triangle-exclamation"></i>
-        To many charachters in the text-box!
-        <i class="tri fa-solid fa-triangle-exclamation"></i>
-      </div>
-      <div class="too-short">
-        <i class="tri fa-solid fa-triangle-exclamation"></i>
-        Not enough charachters in the text-box!
-        <i class="tri fa-solid fa-triangle-exclamation"></i>
-      </div>
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form class="text-box" method="POST" action="/tweets/">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+    <div class="biggest-container">
+      <header class="main-display-avatar-header">
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br>
+        <div>
+          <h2><strong>Asha</strong> Alibarre</h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <div class="too-long">
+          <i class="tri fa-solid fa-triangle-exclamation"></i>
+          To many charachters in the text-box!
+          <i class="tri fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <div class="too-short">
+          <i class="tri fa-solid fa-triangle-exclamation"></i>
+          Not enough charachters in the text-box!
+          <i class="tri fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form class="text-box" method="POST" action="/tweets/">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <br />
+            <div class="button-num">
+              <button class="button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
           <br />
-          <div class="button-num">
-            <button class="button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-        <br />
-      </section>
-      <article class="borderTweets">
-     
-      </article>
-    </main>
+        </section>
+        <article class="borderTweets">
+       
+        </article>
+      </main>
+    </div>
+   
   </body>
 </html>
 

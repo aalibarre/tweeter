@@ -27,6 +27,12 @@ $(document).ready(function () {
     return $borderTweets;
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const createTweetElement = function (tweet) {
     const safeHTML = `${escape(tweet.content.text)}`;
     let $tweet = $(`

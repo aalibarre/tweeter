@@ -1,0 +1,54 @@
+@media only screen and (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+        background-color: #652d6e;
+        background-image: url("../images/45-degree-fabric-light\ \(1\).png");
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .biggest-container {
+        display: flex;
+    }
+
+    .main-display-avatar-header {
+        padding: 2em;
+        margin: 5%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    nav {
+        width: 100%;
+    }
+
+    .biggest-container {
+        display: flex;
+    }
+
+    .main-display-avatar-header {
+        padding: 2em;
+        margin: 5%;
+    }
+    
+}
+
+
+
+    
+
